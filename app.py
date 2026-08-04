@@ -16,7 +16,9 @@ except ImportError:
 DATASET_REPO = "Paing1213/vip-database-storage"
 DB_FILE = "vip_database.json"
 
-ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD")
+# ✅ ဒီနေရာမှာ သင်နှစ်သက်ရာ Password ထည့်ပါ
+ADMIN_PASSWORD = "myadmin123"  # 👈 ဒီနေရာမှာ ပြောင်းပါ
+
 HF_TOKEN = os.environ.get("HF_TOKEN")
 api = HfApi(token=HF_TOKEN)
 
@@ -320,4 +322,3 @@ with gr.Blocks(title="Myanmar Audio Studio", css=custom_css) as demo:
             status_btn.click(fn=check_vip_status_ui, inputs=None, outputs=status_output)
 
 demo.launch()
-                  
