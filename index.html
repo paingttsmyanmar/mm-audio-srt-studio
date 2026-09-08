@@ -2,61 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Myanmar Audio Studio</title>
     <style>
         * {
             box-sizing: border-box;
-        }
-        body, html {
             margin: 0;
             padding: 0;
+        }
+        html, body {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: #ffffff; /* မင်းဆာဗာရဲ့ နောက်ခံအဖြူ/အကြည်ရောင်နှင့် ကွက်တိဖြစ်စေရန် */
+            background-color: #ffffff;
         }
 
-        /* Iframe ကို အောက်ခြေက Built with Gradio စာတန်း မမြင်ရအောင် ညှပ်ထုတ်ထားသော စနစ် */
-        .wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        iframe {
+        .container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            /* အောက်ခြေက Footer ဘားတန်းကို စခရင်အောက် ရောက်သွားစေရန် အမြင့်ကို နည်းနည်း ပိုထားခြင်း */
-            height: calc(100% + 55px);
-            border: none;
+            /* Footer ကို စခရင်အပြင်ဘက် ရောက်သွားစေရန် အောက်သို့ ၁၃၀px ထပ်မံတွန်းထုတ်ထားခြင်း */
+            height: calc(100% + 130px);
+            overflow: hidden;
         }
 
-        /* အောက်ခြေ Settings ⚙️ နှင့် Built with Gradio ကို အပြီးအပိုင် အုပ်ဖုံးပေးမည့် အကာအကွယ် */
-        .footer-cover {
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* အောက်ခြေရှိ Gradio နှင့် Settings စာတန်းများကို ထူထူထဲထဲ အုပ်ဖုံးပေးမည့် အလွှာ */
+        .bottom-mask {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 48px;
-            background-color: #ffffff; /* ပုံထဲကအတိုင်း နောက်ခံအဖြူရောင်ဖြင့် လုံးဝဖုံးအုပ်ထားခြင်း */
-            z-index: 9999;
-            pointer-events: none; /* အသုံးပြုသူ ကလစ်နှိပ်ခြင်းကို မနှောင့်ယှက်စေရန် */
+            height: 120px; /* အမြင့်ကို ၁၂၀px အထိ တိုးမြှင့်ဖုံးအုပ်ထားပါသည် */
+            background-color: #ffffff;
+            z-index: 999999;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <!-- 🎯 မင်းရဲ့ Hugging Face Space Embed လင့်ခ် -->
+    <div class="container">
         <iframe src="https://huggingface.co/embed/Paing1213/my-central-vip-server/main"></iframe>
     </div>
 
-    <!-- 🎯 အောက်ခြေက Gradio နှင့် Settings ကို လုံးဝ အလုံပိတ်ဖုံးကွယ်ထားသော အကွက် -->
-    <div class="footer-cover"></div>
+    <!-- အောက်ခြေကို အလုံပိတ်ဖုံးကွယ်ထားသော အလွှာ -->
+    <div class="bottom-mask"></div>
 
 </body>
 </html>
