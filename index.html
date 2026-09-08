@@ -16,31 +16,26 @@
             overflow: hidden;
             background-color: #ffffff;
         }
-
         .container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            /* Footer ကို စခရင်အပြင်ဘက် ရောက်သွားစေရန် အောက်သို့ ၁၃၀px ထပ်မံတွန်းထုတ်ထားခြင်း */
-            height: calc(100% + 130px);
+            height: calc(100% + 120px);
             overflow: hidden;
         }
-
         iframe {
             width: 100%;
             height: 100%;
             border: none;
             display: block;
         }
-
-        /* အောက်ခြေရှိ Gradio နှင့် Settings စာတန်းများကို ထူထူထဲထဲ အုပ်ဖုံးပေးမည့် အလွှာ */
         .bottom-mask {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 120px; /* အမြင့်ကို ၁၂၀px အထိ တိုးမြှင့်ဖုံးအုပ်ထားပါသည် */
+            height: 110px;
             background-color: #ffffff;
             z-index: 999999;
             pointer-events: none;
@@ -50,10 +45,10 @@
 <body>
 
     <div class="container">
-        <iframe src="https://huggingface.co/embed/Paing1213/my-central-vip-server/main"></iframe>
+        <!-- /main ကို ဖြုတ်ပြီး တိုက်ရိုက် embed လမ်းကြောင်းအတိုင်း ရေးသားထားခြင်း -->
+        <iframe src="https://huggingface.co/embed/Paing1213/my-central-vip-server/"></iframe>
     </div>
 
-    <!-- အောက်ခြေကို အလုံပိတ်ဖုံးကွယ်ထားသော အလွှာ -->
     <div class="bottom-mask"></div>
 
 </body>
