@@ -21,8 +21,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            /* Footer ကို စခရင်အပြင်ရောက်စေရန် အောက်သို့ တွန်းထုတ်ခြင်း */
-            height: calc(100% + 100px);
+            height: calc(100% + 95px);
             overflow: hidden;
         }
         iframe {
@@ -31,7 +30,6 @@
             border: none;
             display: block;
         }
-        /* အောက်ခြေ Gradio စာတန်းကို ဖုံးပေးမည့် အလွှာ */
         .bottom-mask {
             position: fixed;
             bottom: 0;
@@ -47,11 +45,10 @@
 <body>
 
     <div class="container">
-        <!-- 🎯 Hugging Face တရားဝင် Embed လမ်းကြောင်းအမှန် -->
+        <!-- Direct App Domain သာလျှင် iframe ခွင့်ပြုပါသည် -->
         <iframe 
-            src="https://hf.space/embed/Paing1213/mm-voice-tts-srt/+/" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
+            src="https://paing1213-mm-voice-tts-srt.hf.space" 
+            allow="autoplay; clipboard-write">
         </iframe>
     </div>
 
@@ -59,4 +56,3 @@
 
 </body>
 </html>
-
